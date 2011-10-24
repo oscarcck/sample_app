@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
                     :uniqueness => { :case_sensitive => false }
                     
   #auto create the virtual attr 'password_confirmation'
-  validates :passwrod, :presence      => true,
+  validates :password, :presence      => true,
                        :confirmation  => true,
                        :length        => { :within => 6..40 }
   
