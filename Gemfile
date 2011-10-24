@@ -6,8 +6,8 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'pg'
 gem 'gravatar_image_tag'
-gem 'activerecord-postgresql-adapter'
 
 group :development do
   gem 'rspec-rails'
