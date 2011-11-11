@@ -92,6 +92,15 @@ div.field, div.actions {
   margin-bottom: 10px;
 }
 
+/* index */
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
+}
+
 /* signup error */
 .field_with_errors {
   margin-top: 10px;

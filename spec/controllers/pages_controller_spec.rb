@@ -18,6 +18,29 @@ describe PagesController do
       response.should have_selector("title",
                                     :content => @base_title + " | Home")
     end
+    
+    describe "for signed-in users" do
+      
+      it "should have sign up link" do
+        get 'home'
+        response.should have_selector("a",  :href => signup_path,
+                                            :content => "Sign up")
+      end
+    end
+    
+    describe "for signed-in users" do
+      
+      before(:each) do
+        test_sign_in(Factory(:user))
+      end
+      
+      it "should not have sign up link" do
+        get 'home'
+        response.should_not have_selector("a",  :href => signup_path,
+                                                :content => "Sign up")
+      end
+    end
+    
   end
 
   describe "GET 'contact'" do
